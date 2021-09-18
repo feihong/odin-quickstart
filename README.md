@@ -20,3 +20,4 @@ Build and run program
 ## Links
 
 - [Building Odin](https://odin-lang.org/docs/install/#building-odin)
+- [Odin standard library](https://github.com/odin-lang/Odin/tree/master/core)
