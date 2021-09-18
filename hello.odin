@@ -13,11 +13,7 @@ translate :: proc(sentence: string, dict: map[string]string) {
 
   
   for _, i in words {
-    if word, ok := dict[words[i]]; ok {
-      words2[i] = word
-    } else {
-      words2[i] = words[i]
-    }
+    words2[i] = dict[words[i]] or_else words[i]
   }
 
   sentence2 := strings.join(words2[:], " ")
