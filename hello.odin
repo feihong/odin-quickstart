@@ -20,7 +20,6 @@ translate :: proc(sentence: string) {
     delete(words)  
     delete(words2)
   }
-
   
   for _, i in words {
     words2[i] = dict[words[i]] or_else words[i]

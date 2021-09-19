@@ -1,5 +1,5 @@
 # TODO
 
-- How is the built-in Maybe type defined?
-- Add random hanzi example
-- Add discriminated union example
+- [ ] How is the built-in Maybe type defined?
+- [x] Randomize random hanzi example
+- [ ] JSON parsing example

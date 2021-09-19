@@ -17,6 +17,10 @@ Build and run program
 
     odin run hello.odin
 
+Build and run program, passing 1 argument
+
+    odin run random_hanzi.odin -- 9
+
 ## Links
 
 - [Building Odin](https://odin-lang.org/docs/install/#building-odin)

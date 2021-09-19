@@ -3,6 +3,9 @@ package main
 import "core:fmt"
 import "core:math/rand"
 import "core:unicode/utf8"
+import "core:time"
+import "core:os"
+import "core:strconv"
 
 random_int :: proc(start: i32, end: i32) -> i32 {
   max := end - start + 1
@@ -25,7 +28,14 @@ random_hanzi_string :: proc(n : int) -> string {
 }
 
 main :: proc() {
-  for i := 1; i <= 16; i += 1 {
+  rand.set_global_seed(transmute(u64) time.now()._nsec)
+
+  arg := ""
+  if len(os.args) > 1 do arg = os.args[1]
+
+  n := strconv.parse_int(arg) or_else 8
+
+  for i := 1; i <= n; i += 1 {
     s := random_hanzi_string(i)
     defer delete(s)
     fmt.println(s)
