@@ -1,11 +1,12 @@
 /Odin
 *.zip
 
-# programs
+# executables
 hello
 file
 random_hanzi
 raylib_window
+stdin
 
 # output
 output.txt
